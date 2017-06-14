@@ -1,0 +1,38 @@
+<label for="method-type"> Method :</label>
+<div class="methods-wrapper btn-group">
+    <label ng-repeat="(key, method) in ::Home.methods track by $index"
+           class="btn btn-success"
+           id="method-type"
+           type="button"
+           ng-model="$parent.radioModel.model"
+           uib-btn-radio="'{{ key }}'"
+           ng-change="Home.toggleMethod(method)"
+           uncheckable>{{method.name}}</label>
+</div>
+
+
+<div class="api-url-wrapper">
+    <label for="full-url"> URL :</label>
+    <input type="text" ng-model="Home.InputsUtils.url" id="full-url" disabled/>
+</div>
+
+<div class="method-type-wrapper">
+    <span>Method Action :</span> <label class="notice" ng-show="!Home.methodActions">Choose method to see options</label>
+    <div class="btn-group">
+        <label ng-repeat="(name, action) in Home.methodActions track by $index" class="btn btn-success" type="button"
+               ng-model="$parent.radioModel2.model" uib-btn-radio="'{{ name }}'"
+               ng-class="{ 'active': actionSelected === action }"
+               ng-change="Home.toggleMethodAction(action)" uncheckable>{{name}}</label>
+
+    </div>
+</div>
+
+<tr-form-inputs method="Home.methodSelected"
+                action="Home.actionSelected"
+                params="Home.params"></tr-form-inputs>
+
+
+<toaster-container toaster-options="{'close-button':true, 'time-out':{ 'toast-warning': 2000, 'toast-error': 5000 } }"></toaster-container>
+
+
+<button type="submit" class="btn btn-info" ng-click="Home.onSubmit()" ng-disabled="!Home.methodActions">Submit</button>

@@ -1,0 +1,92 @@
+@import "~angularjs-toaster/toaster.min.css";
+body {
+  padding: 25px;
+}
+
+h1 {
+  margin: 15px 0;
+}
+
+pre {
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.method-checkbox {
+  display: inline-block;
+  padding: 12px;
+}
+
+.api-url-wrapper {
+  margin: 10px 0;
+}
+
+.api-url-wrapper input{
+  width: 80%;
+}
+
+.methods-wrapper,
+.method-type-wrapper{
+  background: #023b4a;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  min-height: 44px;
+}
+
+.inputs-key-fields-wrapper .row{
+  margin: 5px;
+}
+.inputs-key-fields-wrapper input{
+  float: right;
+  width: 60%;
+}
+.inputs-key-fields-wrapper{
+  width: 50%;
+  display: inline-block;
+  overflow: hidden;
+
+}
+
+.inputs-fields-wrapper{
+  display: table;
+  width: 100%;
+}
+
+.input-json-body-wrapper textarea{
+  height: 200px;
+  width: 79%;
+  overflow: scroll;
+  float: right;
+}
+
+.input-json-body-wrapper label{
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.input-json-body-wrapper{
+  width: 47%;
+display: inline-block;
+  vertical-align: top;
+  padding-left: 22px;
+}
+Ø
+
+.table-row{
+  display: table-row;
+}
+.table-cell{
+  display: table-cell;
+}
+
+.notice {
+  color: #ecec9f;
+  padding-left: 12px;
+  margin: 7px;
+}
+
+.ace_editor { height: 200px; }
+
+

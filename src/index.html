@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Parameterization Automation</title>
+        <link rel="stylesheet" href="styles/bootstrap.united.min.css">
+    </head>
+
+    <body ng-controller="AppController as App">
+        <h1 ng-bind="App.title"></h1>
+        <hr/>
+        <ui-view></ui-view>
+        <!-- served from webpack-dev-server -->
+        <script src="bundle.js"></script>
+    </body>
+    <!--<script src="scripts/ui-bootstrap.js"></script>-->
+</html>

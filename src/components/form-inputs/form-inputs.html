@@ -1,0 +1,49 @@
+<div class="inputs-fields-wrapper">
+    <!--//Profile:ClusteringRunSanity:createJsonConfigurationForDataGen:version-->
+
+    <div class="table-row">
+
+        <div class="inputs-key-fields-wrapper">
+
+            <div ng-show="!FormInputs.action.isById || FormInputs.action.isById == 'irrelevant' ">
+                <div class="row">
+                    <label for="profile"> Profile :</label>
+                    <input type="text" ng-model="FormInputs.params.profile" ng-change="FormInputs.updateUrl()" id="profile"/>
+                </div>
+                <div class="row">
+                    <label for="test-name"> Test-name :</label>
+                    <input type="text" ng-model="FormInputs.params.testName" ng-change="FormInputs.updateUrl()" id="test-name"/>
+                </div>
+                <div class="row">
+                    <label for="data-provider"> Data-provider :</label>
+                    <input type="text" ng-model="FormInputs.params.dataProvider" ng-change="FormInputs.updateUrl()" id="data-provider"/>
+                </div>
+                <div class="row">
+                    <label for="version"> Version :</label>
+                    <input type="text" ng-model="FormInputs.params.version" ng-change="FormInputs.updateUrl()" id="version"/>
+                </div>
+                <div class="row">
+                <label for="level"> Level :</label>
+                <input type="text" ng-model="FormInputs.params.level" ng-change="FormInputs.updateUrl()" id="level"/>
+                </div>
+            </div>
+
+            <div class="inputs-id-field-wrapper" ng-show="FormInputs.action.isById || FormInputs.action.isById == 'irrelevant' ">
+                <div class="row">
+                    <label for="record-id"> Id :</label>
+                    <input type="text" ng-change="FormInputs.updateUrl()" ng-model="FormInputs.params.id" id="record-id"/>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="input-json-body-wrapper">
+            <label for="body-param"> Json Body :</label>
+            <textarea ng-model="FormInputs.params.jsonBody" id="body-param"></textarea>
+        </div>
+
+        <!--<div ui-ace></div>-->
+    </div>
+
+
+</div>
